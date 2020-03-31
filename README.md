@@ -14,13 +14,13 @@ or
 You can also explicitly mention which files you would like to convert. To specify a particular type, pass in the respective format paramter as a command line argument. 
 Note: Only one format at a time is supported.
 
-###### For all Word Document files
+##### For all Word Document files
 ```python Convert2PDF.py -f word``` 
 
-###### For all Powerpoint files
+##### For all Powerpoint files
 ```python Convert2PDF.py -f ppt``` 
 
-###### For all Excel Spreadsheets
+##### For all Excel Spreadsheets
 ```python Convert2PDF.py -f excel``` 
 
 ### Missing file formats 
