@@ -3,13 +3,18 @@ A Python3 application that converts multiple Office files into their PDF version
 
 # How to use Convert2PDF
 ### To convert all files in a directory
-```python Convert2PDF.py``` or ```python Convert2PDF.py -f *```
+You can convert all files in a directory using 
+```python Convert2PDF.py```
+or
+```python Convert2PDF.py -f *```
 ### To convert specific formats
-You can also explicitly mention the file format using command line arguments. 
-```python Convert2PDF.py -f word``` for all Word Document files
+You can also explicitly mention which files you would like to convert. To specify a particular type, pass in the respective format paramter as a command line argument.
 
-```python Convert2PDF.py -f ppt``` for all Powerpoint files
-
-```python Convert2PDF.py -f excel``` for all Excel Spreadsheets
+#### For all Word Document files
+```python Convert2PDF.py -f word``` 
+#### For all Powerpoint files
+```python Convert2PDF.py -f ppt``` 
+#### For all Excel Spreadsheets
+```python Convert2PDF.py -f excel``` 
 
 A list of various file formats has been declared at the top section of the code. Don't see a file extension you need? You can add it in!
