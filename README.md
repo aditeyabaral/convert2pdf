@@ -3,6 +3,8 @@ A Python3 application that converts multiple Office files into their PDF version
 
 Convert2PDF takes in a file type as input and exports all matching file extensions for that Office format (such as, a word document may have the extension .doc or .docx) and saves them in a separate directory, thus saving you the hassle of converting them all manually or looking for online converters. Made during the COVID-19 outbreak to kill Quarantine Boredom :P
 
+*Since comtypes primarily supports Windows, Convert2PDF will not work on any other platforms* :(
+
 # Getting Started
 Convert2PDF requires the **comtypes** Python library to be installed. This can be done using a simple pip command.
 
@@ -19,7 +21,6 @@ or
 
 ### To convert specific formats
 You can also explicitly mention which files you would like to convert. To specify a particular type, pass in the respective format paramter as a command line argument. 
-Note: Only one format at a time is supported.
 
 ##### For all Word Document files
 ```python Convert2PDF.py -f word``` 
