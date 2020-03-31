@@ -49,9 +49,9 @@ def convert():
         elif cmd[1]=='*':
             formats = ppt_formats+word_formats+excel_formats
         else:
-            print("Invlid format.\nUse: python -f <word/ppt/excel/*>")
+            print("Invalid format.\nUse: python -f <word/ppt/excel/*>")
     else:
-        print("Invlid format.\nUse: python -f <word/ppt/excel/*>")
+        print("Invalid format.\nUse: python -f <word/ppt/excel/*>")
 
     out_path = os.path.abspath("PDF")
     files = os.listdir()
