@@ -6,9 +6,9 @@ Convert2PDF takes in a file type as input and exports all matching file extensio
 *Since comtypes primarily supports Windows, Convert2PDF will not work on other platforms* :(
 
 # Getting Started
-Convert2PDF requires the **comtypes** Python library to be installed. This can be done using a simple pip command.
+Convert2PDF requires **comtypes** and **img2pdf** to be installed. This can be done using a simple pip command.
 
-```pip install comtypes``` 
+```pip install -r requirements.txt``` 
 
 That's it. You're good to go!
 
@@ -30,6 +30,9 @@ You can also explicitly mention which files you would like to convert. To specif
 
 ##### For all Excel Spreadsheets
 ```python Convert2PDF.py -f excel``` 
+
+##### For all Image files
+```python Convert2PDF.py -f img``` 
 
 ### Missing file formats 
 A list of various file formats has been declared at the top section of the code. Don't see a file extension you need? You can add it in!
