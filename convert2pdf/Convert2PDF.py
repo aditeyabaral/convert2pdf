@@ -1,7 +1,8 @@
-import comtypes.client
+""" converts files of following type 2 pdf"""
 import os
-import shutil
 import sys
+import shutil
+import comtypes.client
 import img2pdf
 
 ppt_formats = ['.ppt', '.pptx']
@@ -17,6 +18,7 @@ format_dictionary = {
 
 
 def PPTtoPDF(inputFileName, outputFileName, formatType=32):
+    """ converts ppts 2 pdf """
     powerpoint = comtypes.client.CreateObject("Powerpoint.Application")
     outputFileName = outputFileName + ".pdf"
     deck = powerpoint.Presentations.Open(inputFileName, WithWindow=False)
@@ -26,6 +28,7 @@ def PPTtoPDF(inputFileName, outputFileName, formatType=32):
 
 
 def WordtoPDF(inputFileName, outputFileName, formatType=17):
+    """ converts word 2 pdf """
     word = comtypes.client.CreateObject("Word.Application")
     word.Visible = False
     outputFileName = outputFileName + ".pdf"
@@ -36,6 +39,7 @@ def WordtoPDF(inputFileName, outputFileName, formatType=17):
 
 
 def ExceltoPDF(inputFileName, outputFileName, formatType=56):
+    """ coverts excel 2 pdf """
     excel = comtypes.client.CreateObject("Excel.Application")
     excel.Visible = False
     outputFileName = outputFileName + ".pdf"
@@ -46,11 +50,13 @@ def ExceltoPDF(inputFileName, outputFileName, formatType=56):
 
 
 def ImagetoPDF(inputFileName, outputFileName):
+    """ converts image 2 pdf """
     with open(f"{outputFileName}.pdf","wb") as f:
-	    f.write(img2pdf.convert(inputFileName))
+        f.write(img2pdf.convert(inputFileName))
 
 
 def convert():
+    """ main method """
     cmd = sys.argv[1:]
     formats = []
     if len(cmd) == 0:
